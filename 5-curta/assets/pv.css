@@ -5,12 +5,12 @@ body{padding-top:var(--pv-bar)}
 .top{top:var(--pv-bar)!important}
 html{scroll-padding-top:90px!important}
 a.logo{display:inline-flex;align-items:center;line-height:0;text-decoration:none}
-.logo img,.foot-logo img{display:block;height:30px;width:auto}
+.logo img,.foot-logo img{display:block;height:26px;width:auto}
 .foot-logo{display:inline-flex;margin-bottom:10px;line-height:0}
-.foot-logo img{height:24px}
+.foot-logo img{height:22px}
 .foot-line{display:block}
 .foot-line a{color:inherit;text-decoration:underline;text-underline-offset:3px}
-@media(max-width:600px){.logo img{height:25px}.foot-logo img{height:22px}}
+@media(max-width:600px){.logo img{height:22px}.foot-logo img{height:20px}}
 
 /* sample calendar */
 .bd-cal{--c-ink:#25272B;--c-bg:#FBFAF7;--c-line:#D9D8D2;--c-mute:#5d6167;--c-gold:#25272B;max-width:480px;margin:14px auto;background:var(--c-bg);color:var(--c-ink);border:1px solid var(--c-line);border-radius:12px;padding:18px;text-align:left;font-family:'Source Sans 3',-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.4;box-shadow:0 1px 0 rgba(0,0,0,.04)}
