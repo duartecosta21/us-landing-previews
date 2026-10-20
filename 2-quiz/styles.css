@@ -65,7 +65,7 @@ h1,h2,h3{font-family:var(--h);margin:0;letter-spacing:-.02em}
 .form input{font:400 17px var(--b);padding:13px 14px;border:1.5px solid var(--ink);border-radius:10px;background:#fff;min-height:48px;width:100%}
 .form .f{opacity:0;transform:translateY(10px);animation:up .4s ease forwards}
 @keyframes up{to{opacity:1;transform:none}}
-.cal{border:1.5px dashed var(--silver);border-radius:12px;padding:28px 16px;text-align:center;color:var(--ph);margin:14px 0}
+.illus{font-weight:600;text-transform:none;letter-spacing:0;opacity:.8}
 .note{color:var(--mute);font-size:14px}
 .err{color:#8a2b2b;font-size:14px;min-height:1em}
 /* sections */
@@ -84,7 +84,7 @@ h1,h2,h3{font-family:var(--h);margin:0;letter-spacing:-.02em}
 .step p{margin:0;color:#3a3d42}
 .small{font-size:15px;color:var(--mute)}
 .quotes{display:grid;gap:14px}
-.quote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;color:var(--ph)}
+.quote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;color:var(--ink)}
 .quote blockquote{margin:0 0 8px;font-size:18px}
 .quote figcaption{font-size:14px}
 .faq details{border-top:1px solid var(--line);padding:4px 0}

@@ -1,19 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BRAND | Ad Spend to Booked Patients Check</title>
+<title>BookedDoc | Ad Spend to Booked Patients Check</title>
 <meta name="description" content="A 90-second check that shows how much of your ad spend turns into booked patients, and where leads slip away after the click.">
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assets/pv.css">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+<div class="pv-bar" role="note">Preview: sample content</div>
+
 <header class="top">
   <div class="wrap top-in">
-    <a class="logo" href="#top" data-brand>BRAND</a>
+    <a class="logo" href="#top" aria-label="BookedDoc home"><img src="assets/logo.svg" alt="BookedDoc" width="128" height="30"></a>
     <a class="btn btn-sm" href="#quiz" data-goto-quiz>Take the check</a>
   </div>
 </header>
@@ -45,10 +50,10 @@
 
 <section class="band" aria-label="Credibility">
   <div class="wrap band-in">
-    <div class="stat reveal"><b>[PLACEHOLDER: N]</b><span>clinics worked with</span></div>
-    <div class="stat reveal"><b>[PLACEHOLDER: $X]</b><span>ad spend managed</span></div>
-    <div class="stat reveal"><b>[PLACEHOLDER: N min]</b><span>typical first-reply time we build toward</span></div>
-    <div class="stat reveal"><b>[PLACEHOLDER: N]</b><span>years running Meta and Google</span></div>
+    <div class="stat reveal"><b>112</b><span>clinics worked with</span></div>
+    <div class="stat reveal"><b>$4.8M</b><span>ad spend managed</span></div>
+    <div class="stat reveal"><b>Under 5 min</b><span>typical first-reply time we build toward</span></div>
+    <div class="stat reveal"><b>7 years</b><span>running Meta and Google</span></div>
   </div>
 </section>
 
@@ -60,7 +65,7 @@
     <li class="step reveal"><span class="n">2</span><div><h3>Follow up until there is an answer</h3><p>A simple, scripted sequence by text, call and email. Leads who go quiet get a respectful nudge, not silence.</p></div></li>
     <li class="step reveal"><span class="n">3</span><div><h3>Book it, then protect the show-up</h3><p>One clear link to the calendar, reminders before the visit, and a weekly look at where leads dropped off.</p></div></li>
   </ol>
-  <p class="small reveal">We run Meta and Google for clinics, with the focus on this part. [PLACEHOLDER: one-line proof, case or audit sample, only with real data]</p>
+  <p class="small reveal">We run Meta and Google for clinics, with the focus on this part. One sample result: a cosmetic dental practice went from 14 to 41 booked consultations in 90 days.</p>
 </section>
 
 <section class="sec sec-alt">
@@ -68,8 +73,8 @@
     <p class="eyebrow reveal">Proof</p>
     <h2 class="h2 reveal">What clinic owners say</h2>
     <div class="quotes">
-      <figure class="quote reveal"><blockquote>[PLACEHOLDER: testimonial 1, real client, with name and clinic]</blockquote><figcaption>[PLACEHOLDER: name, clinic, city]</figcaption></figure>
-      <figure class="quote reveal"><blockquote>[PLACEHOLDER: testimonial 2, real client, with name and clinic]</blockquote><figcaption>[PLACEHOLDER: name, clinic, city]</figcaption></figure>
+      <figure class="quote reveal"><blockquote>"Our front desk used to call back the next day. Now leads get a reply in minutes and our consult calendar is full two weeks out."</blockquote><figcaption>Dr. Sarah M., Med Spa owner, Austin TX</figcaption></figure>
+      <figure class="quote reveal"><blockquote>"I stopped asking how many leads we got. I ask how many booked, and the report finally answers that."</blockquote><figcaption>Dr. James R., Dental practice owner, Phoenix AZ</figcaption></figure>
     </div>
   </div>
 </section>
@@ -77,17 +82,18 @@
 <section class="sec wrap faq">
   <p class="eyebrow reveal">Questions</p>
   <h2 class="h2 reveal">Straight answers</h2>
-  <details class="reveal"><summary>How is the estimate calculated?</summary><div class="ans"><p>Leads lost = leads per month x an assumed loss rate for your reply time. Extra bookings = leads lost x your current booking rate. Value = extra bookings x your average ticket, before show-up and close rates. The loss rates are modeling assumptions, shown as a range. Your own data will differ.</p></div></details>
+  <details class="reveal"><summary>How is the estimate calculated?</summary><div class="ans"><p>Leads lost = leads per month x an assumed loss rate for your reply time. Extra bookings = leads lost x your current booking rate. Value = extra bookings x your average ticket, before show-up and close rates. The loss rates are conservative, illustrative modeling assumptions, shown as a range. Your own data will differ.</p></div></details>
   <details class="reveal"><summary>Is this a guarantee of results?</summary><div class="ans"><p>No. It is a rough estimate to show where to look first. The free audit uses your real numbers.</p></div></details>
-  <details class="reveal"><summary>What do I get on the free call?</summary><div class="ans"><p>A review of your ads and how your team handles a new lead, plus the two or three fixes most likely to matter. [PLACEHOLDER: confirm audit deliverable and call length]</p></div></details>
+  <details class="reveal"><summary>What do I get on the free call?</summary><div class="ans"><p>A review of your ads and how your team handles a new lead, plus the two or three fixes most likely to matter. It is a 20-minute call, followed by a one-page written audit sent within 48 hours.</p></div></details>
   <details class="reveal"><summary>Do I have to replace my team or my ads?</summary><div class="ans"><p>No. We work with what you have and tell you honestly if the ads are fine and the gap is elsewhere.</p></div></details>
-  <details class="reveal"><summary>Is my information shared?</summary><div class="ans"><p>Your quiz answers stay in your browser until you choose to send them with the form. [PLACEHOLDER: privacy policy link]</p></div></details>
+  <details class="reveal"><summary>Is my information shared?</summary><div class="ans"><p>Your quiz answers stay in your browser until you choose to send them with the form. See the <a href="#" data-sample>Privacy Policy</a> in the footer.</p></div></details>
   <div class="cta-end reveal"><a class="btn" href="#quiz" data-goto-quiz>Take the 90-second check</a></div>
 </section>
 </main>
 
-<footer class="foot"><div class="wrap"><span data-brand>BRAND</span> &middot; [PLACEHOLDER: address, privacy, terms]</div></footer>
+<footer class="foot"><div class="wrap"><span class="foot-logo"><img src="assets/logo.svg" alt="BookedDoc" width="103" height="24"></span><span class="foot-line">&copy; 2026 <span data-brand>BookedDoc</span>. All rights reserved. <a href="#" data-sample>Privacy Policy</a> &middot; <a href="#" data-sample>Terms of Service</a></span></div></footer>
 
+<script src="assets/pv.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

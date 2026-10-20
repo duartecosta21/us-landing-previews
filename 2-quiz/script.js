@@ -1,5 +1,5 @@
 (function () {
-  const BRAND = 'BRAND'; // ponto unico de configuracao (tambem trocar no <title>)
+  const BRAND = 'BookedDoc'; // ponto unico de configuracao (tambem trocar no <title>)
   document.querySelectorAll('[data-brand]').forEach(e => e.textContent = BRAND);
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -18,8 +18,8 @@
     { id: 'ticket', t: 'What is a typical patient or case worth?', h: 'First treatment value, roughly.', o: [
       ['Under $500', 300], ['$500 to $1,500', 1000], ['$1,500 to $5,000', 3000], ['$5,000 or more', 8000]] }
   ];
-  // Suposicao de modelagem (PLACEHOLDER: validar com fonte antes de publicar): perda por demora, faixa [baixa, alta]
-  const LOSS = [[0, .05], [.05, .15], [.15, .30], [.30, .45], [.45, .60]];
+  // Suposicao de modelagem conservadora e ilustrativa (illustrative estimate): perda por demora, faixa [baixa, alta]
+  const LOSS = [[0, .03], [.03, .08], [.08, .15], [.15, .25], [.25, .35]];
   const WHO = {
     front: 'Front desk replies compete with patients in the chair. Leads tend to wait until a quiet moment.',
     coord: 'A dedicated person is a strong setup. The question is coverage at night and on weekends.',
@@ -105,11 +105,11 @@
     setProgress(Q.length);
     const r = calc();
     const fast = r.T === 0;
-    const rng = (a, b) => (Math.round(a) === Math.round(b) || Math.round(b) < 1) ? '~' + fmt(b) : fmt(a) + ' to ' + fmt(b);
+    const rng = (a, b) => Math.round(b) < 1 ? 'less than 1' : Math.round(a) === Math.round(b) ? '~' + fmt(b) : fmt(a) + ' to ' + fmt(b);
     summary = 'Spend ' + usd(r.S) + '/mo; leads ' + fmt(r.L) + '/mo; reply: ' + Q[2].o[ans[2]][0] + '; who: ' + Q[3].o[ans[3]][0] + '; booked: ' + Math.round(r.B * 100) + '%; ticket ~' + usd(r.V) + '; est. extra bookings ' + rng(r.extraLo, r.extraHi) + '/mo';
     const d = document.createElement('div');
     d.innerHTML =
-      '<p class="res-head">Your estimate</p>' +
+      '<p class="res-head">Your estimate <span class="illus">(illustrative estimate)</span></p>' +
       (fast
         ? '<div class="big">Reply speed is not your main leak<small></small></div><p class="res-sub">Under 5 minutes is where you want to be. Your next question is what happens <em>after</em> the first reply: follow-up and booking.</p>'
         : '<div class="big"><span data-count="' + r.lostLo + '" data-to="' + r.lostHi + '">0</span><small>leads per month</small></div><p class="res-sub">may be slipping away because of reply time alone. If they had been answered fast and booked at your current rate, that is roughly <b>' + rng(r.extraLo, r.extraHi) + ' more booked patients</b> a month' + (r.V ? ', worth about <b>' + usdR(r.valLo) + ' to ' + usdR(r.valHi) + '</b> at your ticket, before show-up and close rates' : '') + '.</p>') +
@@ -126,7 +126,7 @@
         '<p><code>Extra bookings = leads lost x your booking rate (' + Math.round(r.B * 100) + '%)</code></p>' +
         '<p><code>Value = extra bookings x ticket (~' + usd(r.V) + ')</code></p>' +
         '<p><code>Cost per booked = ad spend / (leads x booking rate)</code></p>' +
-        '<p>The loss rates are modeling assumptions, not measured data about your clinic. [PLACEHOLDER: cite source for loss-rate assumptions]</p>' +
+        '<p>The loss rates are conservative, illustrative assumptions, not measured data about your clinic. Treat the result as an illustrative estimate.</p>' +
       '</details>' +
       '<p class="disc">An estimate to show where to look first. It is not a forecast and not a promise of results. Your free audit replaces these assumptions with your real numbers.</p>' +
       '<button type="button" class="btn pulse" id="toForm">Get the free audit with my numbers</button>';
@@ -184,10 +184,11 @@
     stepLabel.textContent = 'Done';
     backBtn.hidden = true;
     const d = document.createElement('div');
-    d.innerHTML = '<h2 class="q-title">Got it. Pick a time.</h2><p class="q-help">Your answers are attached to the booking so the call starts with your numbers. Nothing was sent yet in this preview.</p>' +
-      '<div class="cal">Calendly embed here<br><small>[PLACEHOLDER: scheduling widget]</small></div>' +
+    d.innerHTML = '<h2 class="q-title">Got it. Pick a time.</h2><p class="q-help">Your answers are attached to the booking so the call starts with your numbers. Nothing is sent from this preview.</p>' +
+      '<div class="cal-host" data-title="Free audit call" data-duration="20 min"></div>' +
       '<button type="button" class="btn ghost" id="again">Retake the check</button>';
     stage.appendChild(d);
+    if (window.BDCal) BDCal.mount(d.querySelector('.cal-host'));
     document.getElementById('again').addEventListener('click', () => { ans.length = 0; swap(() => showQ(0)); });
   }
 

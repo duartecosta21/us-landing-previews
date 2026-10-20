@@ -1,13 +1,13 @@
 (function(){
 'use strict';
 /* ===== Configuration (single place) ===== */
-const BRAND = 'BRAND';            // change here and in <title>
+const BRAND = 'BookedDoc';       // change here and in <title>
 const DELAY_SECONDS = 20;         // booking button unlock delay
 const SIMULATED_DURATION = 90;    // fake video length in seconds
 /* ======================================== */
 const q=(s)=>document.querySelector(s), qa=(s)=>[...document.querySelectorAll(s)];
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-document.title = document.title.replace('BRAND', BRAND);
+document.title = document.title.replace('BookedDoc', BRAND);
 qa('[data-brand]').forEach(e=>e.textContent=BRAND);
 
 let delay = DELAY_SECONDS;

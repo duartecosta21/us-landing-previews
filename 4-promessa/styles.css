@@ -11,10 +11,6 @@ body{font:400 18px/1.55 var(--b);color:var(--graphite);background:var(--porcelai
 h1,h2,h3{font-family:var(--h);letter-spacing:-.02em;line-height:1.1}
 h2{font-weight:800;font-size:clamp(28px,5vw,44px);margin-bottom:16px}
 h3{font-weight:700;font-size:19px;margin-bottom:6px;line-height:1.25}
-.ph{color:var(--ph);font-weight:600}
-b.ph{font-weight:inherit}
-.sec-dark .ph,.hero .ph{color:var(--ph)}
-.sec-dark .ph{color:#9a9da3}
 .fine{font-size:14px;color:var(--ink-2);margin-top:12px}
 .sec-dark .fine{color:var(--silver)}
 .eyebrow{font:700 13px var(--h);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-bottom:12px}
@@ -51,7 +47,7 @@ b.ph{font-weight:inherit}
 .bar i{display:block;height:100%;width:100%;background:var(--graphite);transform-origin:left;transform:scaleX(.35)}
 .stats{list-style:none;display:grid;grid-template-columns:1fr;gap:10px;max-width:700px;padding:0}
 .stats li{border-top:2px solid var(--graphite);padding-top:8px;font:800 20px var(--h);display:flex;flex-direction:column;min-width:0;overflow-wrap:anywhere}
-.stats span{font:600 13px var(--b);color:var(--ph)}
+.stats span{font:600 13px var(--b);color:var(--ink-2)}
 .stats b{font-size:15px}
 
 /* sections */
@@ -130,7 +126,6 @@ legend{font:700 18px var(--h);margin-bottom:10px}
 .fields label{display:grid;gap:4px;font:600 14px var(--h)}
 .fields input{font:400 17px var(--b);padding:12px;border-radius:6px;border:1px solid #5a5d63;background:#1c1e21;color:var(--porcelain)}
 .err{color:#f0c4c4;margin-bottom:12px;font-size:15px}
-.cal{border:2px dashed var(--silver);padding:70px 16px;text-align:center;font:700 18px var(--h);color:var(--silver);border-radius:6px}
 .thanks{font-size:28px}
 
 .foot{padding:28px 0 90px;font-size:14px;color:var(--ink-2);border-top:1px solid var(--line)}

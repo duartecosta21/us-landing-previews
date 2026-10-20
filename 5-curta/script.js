@@ -1,4 +1,4 @@
-const BRAND = "BRAND"; // unico ponto de configuracao do nome (trocar aqui + <title>)
+const BRAND = "BookedDoc"; // unico ponto de configuracao do nome (trocar aqui + <title>)
 document.title = BRAND + " | More booked consults from the ads you already run";
 document.querySelectorAll("[data-brand]").forEach(e => { e.textContent = BRAND; });
 

@@ -11,8 +11,6 @@ html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 'Source Sans 3',system-ui,sans-serif;-webkit-text-size-adjust:100%;overflow-x:hidden}
 h1,h2,h3,.btn,.logo,.tag,.kick,.top-cta,.q-count{font-family:'Manrope',system-ui,sans-serif}
 .wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 16px}
-.ph{color:var(--ph);font-size:.88em;font-style:normal}
-.dark .ph{color:#9a9ea4}
 a{color:inherit}
 /* header */
 .top{position:sticky;top:0;z-index:20;background:rgba(243,242,238,.94);border-bottom:1px solid var(--line)}
@@ -68,11 +66,8 @@ input.bad{border-color:#8a1f1f}
 .mini label{font:600 14px 'Manrope';display:block;margin-bottom:6px}
 .mini-row{display:flex;gap:8px}
 .mini-row .btn{min-height:48px;padding:0 16px;white-space:nowrap;width:auto;margin:0}
-.out .btn.ghost{width:100%;margin-top:4px;color:var(--ph)}
-.cal{margin-top:12px;border:1.5px dashed var(--silver);border-radius:10px;padding:16px;text-align:center;background:var(--bg)}
-.cal strong{display:block;font-family:'Manrope';margin-bottom:2px}
-.cal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:12px}
-.cal-grid i{height:34px;border-radius:6px;background:var(--line)}
+.out .btn.ghost{width:100%;margin-top:4px;color:var(--ink)}
+.cta-guar{font-weight:600;color:var(--mute);max-width:420px}
 /* sections */
 .sec{padding:56px 0}
 .dark{background:var(--ink);color:var(--bg)}

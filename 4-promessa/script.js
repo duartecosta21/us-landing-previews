@@ -1,9 +1,9 @@
 // Ponto unico de configuracao da marca (trocar aqui e no <title> do index.html)
-const BRAND = "BRAND";
+const BRAND = "BookedDoc";
 
 (function () {
   document.querySelectorAll("[data-brand]").forEach(function (e) { e.textContent = BRAND; });
-  document.title = document.title.replace("BRAND", BRAND);
+  document.title = document.title.replace("BookedDoc", BRAND);
 
   var root = document.documentElement;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -92,7 +92,6 @@ const BRAND = "BRAND";
     document.getElementById("err2").hidden = !!ok;
     if (ok) go(3);
   });
-  // passo 3 vira obrigado apos clique no placeholder do calendario
-  form.querySelector(".cal").addEventListener("click", function () { go(4); });
-  form.querySelector(".cal").style.cursor = "pointer";
+  // confirmacao ficticia do calendario de exemplo completa a barra de progresso
+  form.addEventListener("bdcal:confirm", function () { prog.style.transform = "scaleX(1)"; });
 })();

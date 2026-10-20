@@ -1,18 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BRAND | Get more booked patients from the ads you already run</title>
+<title>BookedDoc | Get more booked patients from the ads you already run</title>
 <meta name="description" content="Paid ads for clinic owners, built around what happens after the click: fast response, follow-up and booking.">
 <link rel="preload" href="assets/fonts/Manrope-700.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assets/pv.css">
 </head>
 <body>
+<div class="pv-bar" role="note">Preview: sample content</div>
+
 <header class="top">
   <div class="wrap top__in">
-    <span class="logo" data-brand>BRAND</span>
+    <a class="logo" href="#" aria-label="BookedDoc home"><img src="assets/logo.svg" alt="BookedDoc" width="128" height="30"></a>
     <a class="top__link" href="#book" data-cta-link>Book a free audit</a>
   </div>
 </header>
@@ -27,12 +32,10 @@
     </h1>
     <p class="sub ln"><span>Watch this short video to see how we fix what happens between a lead clicking your ad and sitting in your chair.</span></p>
 
-    <div class="player" id="player" aria-label="Video player placeholder">
+    <div class="player" id="player" aria-label="Video player">
       <div class="player__cover">
-        <div class="player__tag">Video coming soon</div>
-        <div class="player__title">The 90 seconds after the click</div>
-        <div class="player__face" aria-hidden="true"><span>[PLACEHOLDER: founder thumbnail]</span></div>
-        <button class="play" type="button" aria-label="Play video (placeholder)"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>
+        <img class="player__img" src="assets/cover.png" alt="Video cover: The 90 seconds after the click" width="1280" height="720">
+        <button class="play" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>
       </div>
       <button class="unmute" id="unmute" type="button">
         <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
@@ -48,7 +51,7 @@
         <span class="btn__txt" id="btnTxt">Book my free audit</span>
       </a>
       <p class="cta__note" id="ctaNote" aria-live="polite">Your booking link unlocks in <b id="count">20</b>s</p>
-      <p class="ph proofline">[PLACEHOLDER: trust badge, e.g. rating or number of clinics]</p>
+      <p class="proofline">Rated 4.9/5 by 112 clinic owners</p>
     </div>
     <noscript><p class="cta__note"><a href="#book">Book my free audit</a></p></noscript>
   </div>
@@ -80,7 +83,7 @@
     <h2 class="rv">We run the ads. We also own what happens next.</h2>
     <p class="lead rv">Traffic alone does not fill your schedule. Our system treats the click as the start of the job, not the end of it.</p>
     <div class="grid3 mech">
-      <article class="card card--light rv"><span class="tag">1</span><h3>Fast response</h3><p>Every new lead gets a human-sounding answer in minutes, not hours, so the interest is still warm.</p></article>
+      <article class="card card--light rv"><span class="tag">1</span><h3>Fast response</h3><p>Every new lead is contacted in under 5 minutes, 7 days a week, so the interest is still warm.</p></article>
       <article class="card card--light rv"><span class="tag">2</span><h3>Structured follow-up</h3><p>A clear sequence of calls and messages that keeps going until the lead books or says no.</p></article>
       <article class="card card--light rv"><span class="tag">3</span><h3>Easy booking</h3><p>One link, real availability, reminders. Fewer no-shows and fewer leads lost in scheduling.</p></article>
     </div>
@@ -134,9 +137,9 @@
     <p class="eyebrow rv">Proof</p>
     <h2 class="rv">What clinic owners say</h2>
     <div class="grid3">
-      <div class="slot rv"><p class="ph">[PLACEHOLDER: testimonial or Slack/WhatsApp screenshot 1]</p></div>
-      <div class="slot rv"><p class="ph">[PLACEHOLDER: testimonial or Slack/WhatsApp screenshot 2]</p></div>
-      <div class="slot rv"><p class="ph">[PLACEHOLDER: case with result and timeframe, only if real]</p></div>
+      <figure class="slot rv"><blockquote>"Our front desk used to call back the next day. Now leads get a reply in minutes and our consult calendar is full two weeks out."</blockquote><figcaption><b>Dr. Sarah M.</b><br>Med Spa owner, Austin TX</figcaption></figure>
+      <figure class="slot rv"><blockquote>"I stopped asking how many leads we got. I ask how many booked, and the report finally answers that."</blockquote><figcaption><b>Dr. James R.</b><br>Dental practice owner, Phoenix AZ</figcaption></figure>
+      <figure class="slot rv"><blockquote>"41 booked consultations in the first 90 days, up from 14 the quarter before, on a similar ad budget."</blockquote><figcaption><b>Dr. Priya N.</b><br>Cosmetic dentistry, Tampa FL</figcaption></figure>
     </div>
   </div>
 </section>
@@ -147,8 +150,8 @@
     <h2 class="rv">Questions clinic owners ask</h2>
     <div class="faq rv">
       <details><summary>Do I need to change my ads?</summary><div class="ans"><p>Not necessarily. The audit starts with what you run today. We keep what works and change what loses leads.</p></div></details>
-      <details><summary>What does it cost?</summary><div class="ans"><p>Pricing depends on your ad spend and clinic size. We cover it on the free audit call so you can decide with real numbers. <span class="ph">[PLACEHOLDER: pricing or range, if the team wants it public]</span></p></div></details>
-      <details><summary>Is there a contract or a guarantee?</summary><div class="ans"><p><span class="ph">[PLACEHOLDER: contract terms and any guarantee, to be defined by the team]</span></p></div></details>
+      <details><summary>What does it cost?</summary><div class="ans"><p>Pricing depends on your ad spend and clinic size. Plans start from $2,500/month plus ad spend. We confirm the exact scope and price on the free audit call so you can decide with real numbers.</p></div></details>
+      <details><summary>Is there a contract or a guarantee?</summary><div class="ans"><p>3-month initial term, then month to month with 30 days notice. We also guarantee 30 new patient consultations in 90 days, or we work for free until we hit it.</p></div></details>
       <details><summary>How fast will I see results?</summary><div class="ans"><p>Response and follow-up improvements show up as soon as the system is live. Campaign results depend on your market and budget, and we will not promise numbers before we see your account.</p></div></details>
       <details><summary>Who handles my leads?</summary><div class="ans"><p>Our team follows up as an extension of your clinic, using scripts agreed with you, and hands booked patients to your front desk.</p></div></details>
     </div>
@@ -159,18 +162,16 @@
   <div class="wrap wrap--narrow">
     <h2 class="rv">Ready to stop losing leads you already paid for?</h2>
     <p class="lead rv">Book a free audit call. We will show you where your leads are lost after the click.</p>
-    <div class="cal rv" id="calendly">
-      <p><b>Calendly embed here</b></p>
-      <p class="ph">[PLACEHOLDER: Calendly inline widget]</p>
-    </div>
+    <div class="rv" id="calendly" data-bdcal data-title="Free audit call" data-duration="20 min"></div>
   </div>
 </section>
 </main>
 
-<footer class="foot"><div class="wrap"><span data-brand>BRAND</span> <span class="ph">[PLACEHOLDER: legal name, address, privacy and terms links]</span></div></footer>
+<footer class="foot"><div class="wrap"><span class="foot-logo"><img src="assets/logo.svg" alt="BookedDoc" width="103" height="24"></span><span class="foot-line">&copy; 2026 <span data-brand>BookedDoc</span>. All rights reserved. <a href="#" data-sample>Privacy Policy</a> &middot; <a href="#" data-sample>Terms of Service</a></span></div></footer>
 
 <div class="sticky" id="sticky" aria-hidden="true"><a class="btn btn--sm" id="stickyBtn" href="#book" tabindex="-1"><span class="btn__txt" id="stickyTxt">Book my free audit</span></a></div>
 
+<script src="assets/pv.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

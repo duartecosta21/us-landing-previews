@@ -1,18 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BRAND | More booked consults from the ads you already run</title>
+<title>BookedDoc | More booked consults from the ads you already run</title>
 <meta name="description" content="We fix what happens after the click: fast response, follow-up and booking for clinics already running Meta or Google ads. Book a free 20-minute call.">
 <script>document.documentElement.classList.add("js")</script>
 <link rel="preload" href="assets/fonts/Manrope-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assets/pv.css">
 </head>
 <body>
+<div class="pv-bar" role="note">Preview: sample content</div>
+
 <header class="top"><div class="wrap">
-  <span class="logo" data-brand>BRAND</span>
+  <a class="logo" href="#" aria-label="BookedDoc home"><img src="assets/logo.svg" alt="BookedDoc" width="128" height="30"></a>
   <a class="lnk" href="#book">Book a call</a>
 </div></header>
 
@@ -26,7 +31,7 @@
     <div class="rv" style="--d:210ms">
       <a class="btn ring" id="cta1" href="#book">Book your free 20-min call
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <span class="cta-note ph">[PLACEHOLDER: one-line proof, e.g. number of clinics served]</span>
+      <span class="cta-note">Trusted by 112 clinics across the US</span>
     </div>
     <ul class="bul">
       <li class="rv" style="--d:300ms"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><div><b>Fast response</b><span>Every new lead gets a human reply within minutes, not the next morning.</span></div></li>
@@ -38,9 +43,7 @@
   <aside class="book rv" id="book" style="--d:200ms" aria-label="Schedule a call">
     <h2>Pick a time for your 20-minute call</h2>
     <p class="s">Free. No obligation. Times shown in your time zone.</p>
-    <div class="embed" role="img" aria-label="Calendly embed placeholder">
-      <div><strong>Calendly embed here</strong><span class="ph">[PLACEHOLDER: Calendly inline widget, 20-min event]</span></div>
-    </div>
+    <div data-bdcal data-title="Free 20-minute call" data-duration="20 min"></div>
   </aside>
 </div></section>
 
@@ -62,7 +65,7 @@
     <details><summary>Is the call really free?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Yes. It's a 20-minute working session, no pitch deck and no obligation.</div></details>
     <details><summary>Who is this for?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Owners of dental, med spa, plastic surgery and general medical practices who already spend on Meta or Google ads and want more booked consults from that spend.</div></details>
     <details><summary>What do I need to bring?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Just a rough idea of your monthly ad spend and how leads reach your front desk today. Account access is not required for the call.</div></details>
-    <details><summary>What does it cost to work with you?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">We cover pricing on the call, once we know your setup. <span class="ph">[PLACEHOLDER: price range or guarantee, if you want to show it]</span></div></details>
+    <details><summary>What does it cost to work with you?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Plans start from $2,500/month plus ad spend, with a 3-month initial term. We cover the exact scope on the call, once we know your setup.</div></details>
   </div>
 </div></section>
 
@@ -73,9 +76,10 @@
 </div></section>
 </main>
 
-<footer class="foot"><div class="wrap">&copy; <span data-brand>BRAND</span> <span class="ph">[PLACEHOLDER: legal name, privacy and terms]</span></div></footer>
+<footer class="foot"><div class="wrap"><span class="foot-logo"><img src="assets/logo.svg" alt="BookedDoc" width="103" height="24"></span><span class="foot-line">&copy; 2026 <span data-brand>BookedDoc</span>. All rights reserved. <a href="#" data-sample>Privacy Policy</a> &middot; <a href="#" data-sample>Terms of Service</a></span></div></footer>
 
 <div class="sticky" id="sticky"><a class="btn" href="#book">Book your free 20-min call</a></div>
+<script src="assets/pv.js"></script>
 <script src="script.js" defer></script>
 </body>
 </html>

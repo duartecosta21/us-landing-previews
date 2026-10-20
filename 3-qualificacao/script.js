@@ -1,17 +1,17 @@
 (function () {
   'use strict';
   // ===== CONFIG (ponto único de ajuste) =====
-  var BRAND = 'BRAND'; // trocar aqui e no <title> do index.html
+  var BRAND = 'BookedDoc'; // trocar aqui e no <title> do index.html
   var CONFIG = {
     // índices de resposta que desqualificam (0 = primeira opção)
     disqOwner: [2, 3],        // gerente sem poder de decisão, outro
-    disqRevenue: [0],         // abaixo de US$ 40k/mês [PLACEHOLDER: faturamento mínimo]
-    disqSpend: [0, 1],        // sem anúncios, abaixo de US$ 1k [PLACEHOLDER: verba mínima]
-    freeResourceUrl: '#',     // [PLACEHOLDER: link do recurso gratuito]
-    freeResourceLabel: '[PLACEHOLDER: free resource, e.g. "Front Desk Speed-to-Lead Checklist"]'
+    disqRevenue: [0],         // abaixo de US$ 40k/mês (faturamento mínimo de exemplo)
+    disqSpend: [0, 1],        // sem anúncios, abaixo de US$ 1k (verba mínima de exemplo)
+    freeResourceUrl: '#',     // link de exemplo (inerte)
+    freeResourceLabel: 'Get the Front Desk Speed-to-Lead Checklist (PDF)'
   };
 
-  document.title = document.title.replace('BRAND', BRAND);
+  document.title = document.title.replace('BookedDoc', BRAND);
   [].forEach.call(document.querySelectorAll('[data-brand]'), function (el) { el.textContent = BRAND; });
   var yr = document.getElementById('yr'); if (yr) yr.textContent = new Date().getFullYear();
   document.documentElement.classList.add('js');

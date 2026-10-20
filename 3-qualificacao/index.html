@@ -1,17 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BRAND | Free Ad Audit for Clinic Owners</title>
+<title>BookedDoc | Free Ad Audit for Clinic Owners</title>
 <meta name="description" content="Meta and Google ads for clinic owners who already advertise, with a focus on what happens after the click. See if you qualify for a free audit.">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assets/pv.css">
 </head>
 <body>
+<div class="pv-bar" role="note">Preview: sample content</div>
+
 <header class="top">
   <div class="wrap top-in">
-    <a class="logo" href="#top"><span data-brand>BRAND</span></a>
+    <a class="logo" href="#top" aria-label="BookedDoc home"><img src="assets/logo.svg" alt="BookedDoc" width="128" height="30"></a>
     <a class="top-cta" href="#qualify">Check eligibility</a>
   </div>
 </header>
@@ -43,7 +48,7 @@
       <div class="result out" id="outBox" hidden>
         <h2 id="outTitle"></h2>
         <p id="outText"></p>
-        <a class="btn ghost" href="#" id="outLink">[PLACEHOLDER: free resource link]</a>
+        <a class="btn ghost" href="#" id="outLink" data-sample>Get the free checklist</a>
         <form class="mini" id="miniForm" action="#">
           <label for="miniEmail">Want it by email instead?</label>
           <div class="mini-row"><input id="miniEmail" type="email" placeholder="you@clinic.com" autocomplete="email"><button class="btn" type="submit">Send it</button></div>
@@ -55,11 +60,7 @@
         <p class="ok">You look like a fit</p>
         <h2>Pick a time for your free audit</h2>
         <p id="inText">Thanks. Choose a slot below and we will walk through your account and your post-click flow.</p>
-        <div class="cal">
-          <strong>Calendly embed here</strong>
-          <span class="ph">[PLACEHOLDER: Calendly inline widget URL]</span>
-          <div class="cal-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
+        <div data-bdcal data-title="Free audit call" data-duration="20 min"></div>
       </div>
     </div>
   </div>
@@ -99,7 +100,7 @@
     <h2 class="rv">Ads that are built around the first 5 minutes after the click</h2>
     <p class="lead rv">We do not treat the lead form as the finish line. Each campaign ships with the system that turns an inquiry into a booked, confirmed consult.</p>
     <div class="cards">
-      <article class="card rv"><span class="n">01</span><h3>Speed-to-lead reply</h3><p>An immediate, human-sounding first response by text and email, so the lead hears from you first. Target: <span class="ph">[PLACEHOLDER: response-time standard]</span></p></article>
+      <article class="card rv"><span class="n">01</span><h3>Speed-to-lead reply</h3><p>An immediate, human-sounding first response by text and email, so the lead hears from you first. Standard: every new lead contacted in under 5 minutes, 7 days a week.</p></article>
       <article class="card rv"><span class="n">02</span><h3>Follow-up sequence</h3><p>A short, respectful cadence across text, call prompts and email until the lead books or says no.</p></article>
       <article class="card rv"><span class="n">03</span><h3>Front desk playbook</h3><p>Scripts and call handling for your team so every inquiry gets the same warm, confident answer.</p></article>
       <article class="card rv"><span class="n">04</span><h3>Reminders and show-up</h3><p>Confirmations and reminders that cut no-shows, plus reporting on booked and shown consults, not just leads.</p></article>
@@ -117,7 +118,7 @@
       <li class="rv"><span class="dot">3</span><div><h3>Build and launch</h3><p>We set up Meta and Google campaigns, the reply and follow-up system and tracking, then go live.</p></div></li>
       <li class="rv"><span class="dot">4</span><div><h3>Review and improve</h3><p>Regular reviews of booked and shown consults. We adjust creative, targeting and the follow-up as the data comes in.</p></div></li>
     </ol>
-    <div class="cta-row rv"><a class="btn" href="#qualify">Check if you qualify</a><span class="ph">[PLACEHOLDER: guarantee or risk-reversal terms, if any]</span></div>
+    <div class="cta-row rv"><a class="btn" href="#qualify">Check if you qualify</a><span class="cta-guar">Guarantee: 30 new patient consultations in 90 days, or we work for free until we hit it.</span></div>
   </div>
 </section>
 
@@ -129,10 +130,10 @@
       <details class="rv"><summary>Who is this for?</summary><div><p>Owners and decision makers of dental, med spa, plastic surgery and general medicine practices that already spend on ads. If you are not advertising yet, our free resource is a better first step.</p></div></details>
       <details class="rv"><summary>Why do you ask about revenue and ad spend?</summary><div><p>So we only book calls where we can actually help. It also lets us prepare the audit around your numbers instead of spending your time on basics.</p></div></details>
       <details class="rv"><summary>What happens on the audit call?</summary><div><p>We look at your ad account, your lead path and how inquiries are answered. You get specific findings. There is no pressure to continue.</p></div></details>
-      <details class="rv"><summary>How much does it cost?</summary><div><p>Pricing depends on scope and ad spend. <span class="ph">[PLACEHOLDER: pricing range or model]</span> We cover it on the call.</p></div></details>
-      <details class="rv"><summary>Is there a contract?</summary><div><p><span class="ph">[PLACEHOLDER: contract length and cancellation terms]</span></p></div></details>
+      <details class="rv"><summary>How much does it cost?</summary><div><p>Plans start from $2,500/month plus ad spend, and the exact scope depends on your practice. We cover it on the call.</p></div></details>
+      <details class="rv"><summary>Is there a contract?</summary><div><p>3-month initial term, then month to month. After the first term you can cancel with 30 days notice.</p></div></details>
       <details class="rv"><summary>I tried an agency before. Why would this be different?</summary><div><p>Most agencies stop at the lead. We build around the reply, follow-up and booking that happen after it, and report on consults, not clicks.</p></div></details>
-      <details class="rv"><summary>Do you handle patient data safely?</summary><div><p><span class="ph">[PLACEHOLDER: HIPAA and data handling statement, reviewed by counsel]</span></p></div></details>
+      <details class="rv"><summary>Do you handle patient data safely?</summary><div><p>We only handle inquiry details such as name, phone, email and treatment interest, never charts or medical records. Where HIPAA applies, we sign a Business Associate Agreement before touching any lead data.</p></div></details>
     </div>
   </div>
 </section>
@@ -146,9 +147,10 @@
 </section>
 </main>
 
-<footer class="foot"><div class="wrap"><span>&copy; <span id="yr"></span> <span data-brand>BRAND</span></span><span class="ph">[PLACEHOLDER: privacy policy, terms, business address]</span></div></footer>
+<footer class="foot"><div class="wrap"><span class="foot-logo"><img src="assets/logo.svg" alt="BookedDoc" width="103" height="24"></span><span class="foot-line">&copy; 2026 <span data-brand>BookedDoc</span>. All rights reserved. <a href="#" data-sample>Privacy Policy</a> &middot; <a href="#" data-sample>Terms of Service</a></span></div></footer>
 
 <a class="sticky" id="sticky" href="#qualify">Check if you qualify</a>
+<script src="assets/pv.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

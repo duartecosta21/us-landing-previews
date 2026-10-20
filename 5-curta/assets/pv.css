@@ -1,0 +1,53 @@
+/* Preview bar, logo sizing and sample calendar (shared by the 5 pages) */
+:root{--pv-bar:26px}
+.pv-bar{position:fixed;top:0;left:0;right:0;height:var(--pv-bar);z-index:9999;background:#25272B;color:#F3F2EE;font:600 11px/var(--pv-bar) -apple-system,"Helvetica Neue",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;text-align:center;pointer-events:none}
+body{padding-top:var(--pv-bar)}
+.top{top:var(--pv-bar)!important}
+html{scroll-padding-top:90px!important}
+a.logo{display:inline-flex;align-items:center;line-height:0;text-decoration:none}
+.logo img,.foot-logo img{display:block;height:30px;width:auto}
+.foot-logo{display:inline-flex;margin-bottom:10px;line-height:0}
+.foot-logo img{height:24px}
+.foot-line{display:block}
+.foot-line a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){.logo img{height:25px}.foot-logo img{height:22px}}
+
+/* sample calendar */
+.bd-cal{--c-ink:#25272B;--c-bg:#FBFAF7;--c-line:#D9D8D2;--c-mute:#5d6167;--c-gold:#A9803F;max-width:480px;margin:14px auto;background:var(--c-bg);color:var(--c-ink);border:1px solid var(--c-line);border-radius:12px;padding:18px;text-align:left;font-family:'Source Sans 3',-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.4;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.bd-cal *{box-sizing:border-box;margin:0}
+.bd-cal button{font:inherit;color:inherit;cursor:pointer}
+.bd-cal__ev{display:flex;gap:10px;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--c-line);margin-bottom:12px}
+.bd-cal__ev img{width:34px;height:34px;border-radius:8px}
+.bd-cal__ev b{display:block;font:700 15px 'Manrope',sans-serif}
+.bd-cal__ev span{font-size:13px;color:var(--c-mute)}
+.bd-cal__mh{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.bd-cal__mh b{font:700 15px 'Manrope',sans-serif}
+.bd-cal__nav{display:flex;gap:6px}
+.bd-cal__nav button{width:44px;height:36px;border:1px solid var(--c-line);background:#fff;border-radius:8px;font-size:16px;line-height:1}
+.bd-cal__nav button:disabled{opacity:.35;cursor:default}
+.bd-cal__g{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.bd-cal__w{font:700 11px 'Manrope',sans-serif;letter-spacing:.06em;color:var(--c-mute);padding:4px 0}
+.bd-cal__d{height:40px;border:0;border-radius:8px;background:transparent;color:#9a9da3;font-weight:600;cursor:default!important}
+.bd-cal__d.on{background:#ECEBE6;color:var(--c-ink);cursor:pointer!important;transition:background .15s,color .15s,transform .15s}
+.bd-cal__d.on:hover{background:#dedcd5}
+.bd-cal__d.sel,.bd-cal__d.sel:hover{background:var(--c-ink);color:#F3F2EE}
+.bd-cal__d:focus-visible,.bd-cal__t button:focus-visible,.bd-cal__nav button:focus-visible,.bd-cal__again:focus-visible{outline:2px solid var(--c-gold);outline-offset:2px}
+.bd-cal__tz{margin:12px 0 0;font-size:13px;color:var(--c-mute)}
+.bd-cal__tp{margin-top:14px}
+.bd-cal__tp h4{font:700 14px 'Manrope',sans-serif;margin-bottom:8px}
+.bd-cal__t{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.bd-cal__t button{height:44px;border:1.5px solid var(--c-ink);background:#fff;border-radius:8px;font-weight:700;transition:background .15s,color .15s}
+.bd-cal__t button:hover{background:var(--c-ink);color:#F3F2EE}
+.bd-cal__ok{text-align:center;padding:10px 4px 4px}
+.bd-cal__ck{width:52px;height:52px;margin:0 auto 10px;display:block}
+.bd-cal__ck circle{fill:var(--c-ink)}
+.bd-cal__ck path{fill:none;stroke:#F3F2EE;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.bd-cal__ok h4{font:800 19px 'Manrope',sans-serif;margin-bottom:4px}
+.bd-cal__ok p{color:var(--c-mute);font-size:14px;margin-top:6px}
+.bd-cal__again{margin-top:12px;border:0;background:none;text-decoration:underline;text-underline-offset:3px;font-weight:600;padding:8px}
+.bd-cal__in{animation:bdIn .35s ease both}
+.bd-cal__ck path{stroke-dasharray:40;stroke-dashoffset:40;animation:bdDraw .5s .15s ease forwards}
+@keyframes bdIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes bdDraw{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.bd-cal__in{animation:none}.bd-cal__ck path{animation:none;stroke-dashoffset:0}.bd-cal *{transition:none!important}}
+.top{background:#F3F2EE!important}

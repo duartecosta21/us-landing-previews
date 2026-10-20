@@ -11,8 +11,6 @@ body{background:var(--por);color:var(--gra);font:400 17px/1.55 'Source Sans 3',s
 h1,h2,h3,.logo,.btn,.eyebrow,.tag,.n{font-family:'Manrope',system-ui,sans-serif}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 .wrap--narrow{max-width:760px}
-.ph{color:#8a8d93;font-style:italic}
-.sec--dark .ph{color:#9a9ea5}
 .top{position:sticky;top:0;z-index:20;background:var(--por);border-bottom:1px solid var(--line)}
 .top__in{display:flex;justify-content:space-between;align-items:center;height:54px}
 .logo{font-weight:800;letter-spacing:.12em;font-size:15px}
@@ -31,9 +29,6 @@ h1,h2,h3,.logo,.btn,.eyebrow,.tag,.n{font-family:'Manrope',system-ui,sans-serif}
 @keyframes lineIn{to{transform:none}}
 .player{position:relative;max-width:740px;margin:0 auto;aspect-ratio:16/9;background:var(--gra);border-radius:10px;overflow:hidden;color:var(--por);text-align:left}
 .player__cover{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;background:repeating-linear-gradient(135deg,#2b2e33 0 14px,#25272B 14px 28px)}
-.player__tag{position:absolute;top:12px;right:12px;font:700 11px 'Manrope';letter-spacing:.08em;text-transform:uppercase;background:var(--por);color:var(--gra);padding:5px 9px;border-radius:4px}
-.player__title{font:700 clamp(15px,3.6vw,26px)/1.2 'Manrope';max-width:70%}
-.player__face{position:absolute;right:6%;bottom:0;width:32%;height:78%;border:1px dashed var(--pra);border-bottom:0;border-radius:90px 90px 0 0;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;font-size:11px;color:var(--pra)}
 .play{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;border:2px solid var(--por);background:rgba(37,39,43,.6);color:var(--por);display:grid;place-items:center;cursor:pointer;padding:0 0 0 3px}
 .unmute{position:absolute;left:12px;top:12px;display:flex;align-items:center;gap:10px;background:var(--por);color:var(--gra);border:0;border-radius:8px;padding:9px 12px;cursor:pointer;font:inherit;text-align:left;animation:nudge 1.8s var(--ease) 2 .6s}
 .unmute__txt{display:flex;flex-direction:column;line-height:1.15;font-size:12px}
@@ -61,7 +56,7 @@ h1,h2,h3,.logo,.btn,.eyebrow,.tag,.n{font-family:'Manrope',system-ui,sans-serif}
 .btn .btn__fill{display:none}
 .btn[aria-disabled=true] .btn__fill{display:block}
 .cta__note{margin-top:9px;font-size:14px;color:var(--mute)}
-.proofline{margin-top:12px;font-size:13px}
+.proofline{margin-top:12px;font-size:14px;color:var(--mute);font-weight:600}
 .sec{padding:60px 0}
 .sec--dark{background:var(--gra);color:var(--por)}
 .sec--tint{background:var(--tint)}
@@ -97,7 +92,13 @@ h3{font-weight:700;font-size:18px;margin-bottom:6px}
 .list li:before{position:absolute;left:0;top:7px;font-weight:800;font-family:'Manrope'}
 .yes li:before{content:"\2713"}
 .no li:before{content:"\2715";color:var(--mute)}
-.slot{min-height:150px;border:1px dashed var(--pra);border-radius:10px;display:grid;place-items:center;padding:20px;text-align:center;background:var(--por)}
+.slot{margin:0;border:1px solid var(--line);border-radius:10px;padding:22px;text-align:left;background:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.slot blockquote{margin:0;font-size:17px;line-height:1.5}
+.slot figcaption{font-size:14px;color:var(--mute);line-height:1.35}
+.slot figcaption b{color:var(--gra)}
+.player__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.player__cover{background:var(--gra)!important}
+.player__cover::after{content:"";position:absolute;inset:0}
 .faq details{border-bottom:1px solid var(--line)}
 .faq summary{cursor:pointer;padding:18px 28px 18px 0;font:700 17px 'Manrope';list-style:none;position:relative}
 .faq summary::-webkit-details-marker{display:none}
@@ -110,7 +111,6 @@ details[open] .ans{grid-template-rows:1fr}
 details[open] .ans p{padding-bottom:18px}
 .final{text-align:center}
 .final h2,.final .lead{margin-left:auto;margin-right:auto}
-.cal{margin:0 auto;max-width:620px;min-height:260px;border:1px dashed var(--pra);border-radius:10px;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:24px}
 .foot{padding:26px 0 90px;font-size:13px;color:var(--mute);text-align:center}
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--por);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s var(--ease);display:none}
 .sticky.show{transform:none}
@@ -133,3 +133,4 @@ details[open] .ans p{padding-bottom:18px}
  .bar i{transform:none}.steps:before{transform:none}.steps li{opacity:1}
  .btn__fill{display:none!important}
 }
+@media(max-width:600px){.play{top:56%}}

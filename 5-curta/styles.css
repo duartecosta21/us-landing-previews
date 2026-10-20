@@ -32,12 +32,9 @@ h1{text-wrap:balance;font-weight:800;font-size:30px;line-height:1.12;letter-spac
 .ico svg{width:17px;height:17px}
 .bul b{font:700 17px Manrope,sans-serif;display:block;line-height:1.3}
 .bul div span{color:#3d4046;font-size:16px;line-height:1.4;display:block}
-.ph{color:#9a9ea4;font-size:14px}
 .book{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
 .book h2{font-size:20px;line-height:1.2;margin-bottom:4px}
 .book p.s{font-size:15px;color:var(--mute);margin-bottom:14px}
-.embed{border:1.5px dashed var(--silver);border-radius:var(--r);min-height:300px;display:grid;place-items:center;text-align:center;padding:20px;color:#9a9ea4;background:repeating-linear-gradient(0deg,transparent 0 39px,#eceae4 39px 40px)}
-.embed strong{display:block;font:700 16px Manrope,sans-serif;color:var(--mute);margin-bottom:4px}
 .sec{padding:60px 0;border-top:1px solid var(--line)}
 h2.t{font-weight:800;font-size:26px;line-height:1.15;letter-spacing:-.015em;margin-bottom:8px}
 .lead{color:#3d4046;margin-bottom:34px;max-width:34em}
@@ -74,8 +71,7 @@ h2.t{font-weight:800;font-size:26px;line-height:1.15;letter-spacing:-.015em;marg
  .hero .wrap{grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
  h1{font-size:46px}
  .book{padding:28px;position:sticky;top:20px}
- .embed{min-height:380px}
- .sec{padding:84px 0}
+  .sec{padding:84px 0}
  h2.t,.final h2{font-size:34px}
  .steps{grid-template-columns:repeat(3,1fr);gap:28px}
  .steps li:not(:last-child)::before{left:44px;top:21px;width:calc(100% - 44px + 28px);height:2px;transform-origin:left}
