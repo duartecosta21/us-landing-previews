@@ -13,7 +13,7 @@ a.logo{display:inline-flex;align-items:center;line-height:0;text-decoration:none
 @media(max-width:600px){.logo img{height:25px}.foot-logo img{height:22px}}
 
 /* sample calendar */
-.bd-cal{--c-ink:#25272B;--c-bg:#FBFAF7;--c-line:#D9D8D2;--c-mute:#5d6167;--c-gold:#A9803F;max-width:480px;margin:14px auto;background:var(--c-bg);color:var(--c-ink);border:1px solid var(--c-line);border-radius:12px;padding:18px;text-align:left;font-family:'Source Sans 3',-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.4;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.bd-cal{--c-ink:#25272B;--c-bg:#FBFAF7;--c-line:#D9D8D2;--c-mute:#5d6167;--c-gold:#25272B;max-width:480px;margin:14px auto;background:var(--c-bg);color:var(--c-ink);border:1px solid var(--c-line);border-radius:12px;padding:18px;text-align:left;font-family:'Source Sans 3',-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.4;box-shadow:0 1px 0 rgba(0,0,0,.04)}
 .bd-cal *{box-sizing:border-box;margin:0}
 .bd-cal button{font:inherit;color:inherit;cursor:pointer}
 .bd-cal__ev{display:flex;gap:10px;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--c-line);margin-bottom:12px}
