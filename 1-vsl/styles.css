@@ -122,7 +122,7 @@ details[open] .ans p{padding-bottom:18px}
  body{font-size:18px}
  .h1{font-size:46px}.sub{font-size:19px}
  h2{font-size:38px}
- .grid3{grid-template-columns:repeat(3,1fr)}.grid2{grid-template-columns:1fr 1fr}
+ .grid3{grid-template-columns:repeat(3,1fr)}.grid5{grid-template-columns:repeat(6,1fr)}.grid5 .card{grid-column:span 2}.grid5 .card:nth-child(4){grid-column:2/4}.grid5 .card:nth-child(5){grid-column:4/6}.grid2{grid-template-columns:1fr 1fr}
  .sec{padding:96px 0}.hero{padding:34px 0 64px}
 }
 @media(max-width:759px){.sticky{display:block}.btn{width:100%}}

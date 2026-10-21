@@ -132,7 +132,7 @@ input.bad{border-color:#8a1f1f}
   .sec{padding:92px 0}
   .sec h2{font-size:38px}
   .two{grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-  .cards{grid-template-columns:repeat(4,1fr)}
+  .cards{grid-template-columns:repeat(6,1fr)}.cards .card{grid-column:span 2}.cards .card:nth-child(4){grid-column:2/4}.cards .card:nth-child(5){grid-column:4/6}
   .cta-row{flex-direction:row;align-items:center;gap:18px}
   .sticky{display:none}
   .foot .wrap{flex-direction:row;justify-content:space-between}

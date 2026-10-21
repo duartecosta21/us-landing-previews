@@ -162,7 +162,7 @@ legend{font:700 18px var(--h);margin-bottom:10px}
   .hero{padding:64px 0 72px}
   .hero-cta{flex-direction:row;align-items:center;gap:18px}
   .sec{padding:96px 0}
-  .grid{grid-template-columns:repeat(4,1fr)}
+  .grid{grid-template-columns:repeat(5,1fr)}
   .fit{grid-template-columns:1fr 1fr;gap:48px}
   .stats{grid-template-columns:repeat(3,1fr)}
   .stats li{font-size:26px}.stats b{font-size:18px}
